@@ -1,33 +1,28 @@
 hostname "Leaseweb's CS Server"
 
-sv_lan 0
-sv_contact "hagnat@gmail.com"
+sv_contact "hagnat@gmail.com" // do not spam >:|
+sv_lan 0             // this is a public server... what can go wrong ?
 
-mp_timelimit 30
-mp_startmoney 800
-mp_friendlyfire 0
-mp_winlimit 20
-sv_aim 0
-sv_cheats 0
+rcon_password ""     // set rcon_password so you have admin rights
 
-//sv_allowupload <0/1> Allow clients to upload their custom decals to the server. Default: 1 
-sv_allowupload 0
+mp_timelimit 30      // map cycles every 30min
+mp_winlimit 20       // map cycles when a team reaches 20 victories
 
-mp_forcecamera 1
+mp_startmoney 800    // 800$ starting money
+mp_friendlyfire 0    // no friendly fire
+mp_forcecamera 1     // same team only spectator mode
 
+sv_aim 0             // no auto aim
+sv_cheats 0          // no cheats
+sv_allowupload 0     // disable custom decals
+
+// logs everything
 log on
 sv_logbans 1
 sv_logecho 1
 sv_logfile 1
 
-//sv_logsdir Folder in the game directory where server logs will be stored.
-
-//RECON
-//rcon_password Set rcon passsword. Leave blank to disable rcon 
-rcon_password "YOUR_RCON_PASSWORD"
-
 // lists of banned players.
 // load ban files
 exec listip.cfg
 exec banned.cfg
-
